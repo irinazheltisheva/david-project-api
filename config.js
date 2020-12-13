@@ -4,13 +4,9 @@ import { HOUR, MINUTE } from './constants.js'
 export default rc('david', {
   port: 3001,
   cache: {
-    type: 'memory', // also 'redis' + add additional redisConnectionString and ioredis prop for config
+    type: 'memory', // also 'redis' + add additional redis prop for config
     maxAge: HOUR,
-    maxStale: HOUR + MINUTE,
-    ioredis: {
-      keyPrefix: 'project',
-      enableAutoPipelining: true
-    }
+    maxStale: HOUR + MINUTE
   },
   octokit: {
     authToken: null
