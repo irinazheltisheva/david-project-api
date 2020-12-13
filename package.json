@@ -1,0 +1,28 @@
+{
+  "name": "@david-dm/project-api",
+  "version": "0.0.0",
+  "description": "JSON HTTP API for retrieving a `package.json` file from GitHub (and potentially other sources).",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node bin/start.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard"
+  },
+  "author": "Alan Shaw",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/plugin-retry": "^3.0.3",
+    "@octokit/plugin-throttling": "^3.3.1",
+    "@octokit/rest": "^18.0.6",
+    "compression": "^1.7.4",
+    "express": "^5.0.0-alpha.8",
+    "ioredis": "^4.19.2",
+    "lru-cache": "^6.0.0",
+    "piggybacker": "^2.0.0",
+    "rc": "^1.2.8"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
