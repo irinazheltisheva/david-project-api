@@ -16,6 +16,7 @@ export async function start (config) {
   if (!config) throw new Error('missing config')
   const pkg = JSON.parse(await fs.promises.readFile(pkgPath))
   const cache = config.cache?.type === 'redis' ? new RedisCache(config.cache) : new MemoryCache(config.cache)
+  if (cache instanceof MemoryCache) console.warn('🚨 Using in memory cache')
   const Providers = {
     [Services.GitHub]: new GhProjBase(cache, {
       userAgent: `${pkg.name} v${pkg.version}`,
