@@ -6,7 +6,7 @@ import { HOUR, MINUTE } from './constants.js'
 export class RedisCache {
   constructor (config) {
     if (!config) throw new Error('missing config')
-    if (!config.redis) throw new Error('missing redis connection string in config')
+    if (!config.redis) throw new Error('missing redis config')
     this._redis = redis.createClient(config.redis)
     this._redis.getAsync = promisify(this._redis.get).bind(this._redis)
     this._redis.setAsync = promisify(this._redis.set).bind(this._redis)
