@@ -1,7 +1,7 @@
 import rc from 'rc'
 import { HOUR, MINUTE } from './constants.js'
 
-export default rc('project-api', {
+export default rc('david', {
   port: 3001,
   cache: {
     type: 'memory', // also 'redis' + add additional redisConnectionString and ioredis prop for config
