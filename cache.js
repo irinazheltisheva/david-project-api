@@ -1,7 +1,7 @@
 import redis from 'redis'
 import LRUCache from 'lru-cache'
 import { promisify } from 'util'
-import { HOUR, MINUTE } from './constants.js'
+import { HOUR, YEAR } from './constants.js'
 
 export class RedisCache {
   constructor (config) {
@@ -11,7 +11,7 @@ export class RedisCache {
     this._redis.getAsync = promisify(this._redis.get).bind(this._redis)
     this._redis.setAsync = promisify(this._redis.set).bind(this._redis)
     this._maxAge = config.maxAge ?? HOUR
-    this._maxStale = config.maxStale ?? HOUR + MINUTE
+    this._maxStale = config.maxStale ?? YEAR
     this._keyPrefix = config.keyPrefix ?? 'project:'
   }
 
@@ -35,7 +35,7 @@ export class RedisCache {
 export class MemoryCache {
   constructor (config) {
     this._maxAge = config?.maxAge ?? HOUR
-    this._maxStale = config?.maxStale ?? HOUR + MINUTE
+    this._maxStale = config?.maxStale ?? YEAR
     this._lru = new LRUCache({ maxAge: this._maxAge + this._maxStale })
   }
 
