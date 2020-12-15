@@ -9,6 +9,6 @@ export default rc('david', {
     maxStale: YEAR
   },
   octokit: {
-    authToken: null
+    auth: null
   }
 })
