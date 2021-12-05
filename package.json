@@ -20,7 +20,7 @@
     "lru-cache": "^6.0.0",
     "piggybacker": "^2.0.0",
     "rc": "^1.2.8",
-    "redis": "^3.0.2"
+    "redis": "^3.1.2"
   },
   "devDependencies": {
     "standard": "^16.0.3"
