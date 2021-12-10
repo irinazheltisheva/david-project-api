@@ -12,7 +12,7 @@
   "author": "Alan Shaw",
   "license": "MIT",
   "dependencies": {
-    "@octokit/plugin-retry": "^3.0.3",
+    "@octokit/plugin-retry": "^3.0.9",
     "@octokit/plugin-throttling": "^3.3.1",
     "@octokit/rest": "^18.0.6",
     "compression": "^1.7.4",
