@@ -15,7 +15,7 @@
     "@octokit/plugin-retry": "^3.0.3",
     "@octokit/plugin-throttling": "^3.3.1",
     "@octokit/rest": "^18.0.6",
-    "compression": "^1.7.4",
+    "compression": "^1.8.1",
     "express": "^5.0.0-alpha.8",
     "lru-cache": "^6.0.0",
     "piggybacker": "^2.0.0",
